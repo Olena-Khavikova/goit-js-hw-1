@@ -1,4 +1,4 @@
-const userPassword = 'jqueryismyjam';
+const userPassword = null;
 
 const ADMIN_PASSWORD = 'jqueryismyjam';
 
@@ -8,17 +8,26 @@ const ACCESS_DENIED = 'Доступ запрещен, неверный паро�
 let message;
 
 // Write code under this line
+if (userPassword === null)  {
+  message = 'Отменено пользователем!'
+  
+} else if (userPassword === ADMIN_PASSWORD){
+  message = 'Добро пожаловать!'
+  
+} else {
+  message = 'Доступ запрещен, неверный пароль!'};
 
-// console.log(message);
 
-//если userPassword равно 'jqueryismyjam'
+console.log(message);
+
+//если userPassword равно 'jqueryismyjam' 
 // то значение message будет равно
 // 'Добро пожаловать!'
 
-//если userPassword равно  null
-// то значение message будет равно
+//если userPassword равно  null 
+// то значение message будет равно  
 // 'Отменено пользователем!'
 
-//если userPassword равно '123'
+//если userPassword равно '123' 
 // то значение message будет равно
 // 'Доступ запрещен, неверный пароль!'

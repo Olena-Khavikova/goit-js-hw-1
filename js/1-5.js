@@ -12,7 +12,7 @@ let country;
 if (countryName === null) {
   message = CANCELED_BY_USER;
 } else {
-  country = countryName[0].toLowerCase() + countryName.slice(2).toLowerCase(); // Write code on this line
+  country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
   switch (country) {
     // Write code under this line
     case CHINA:
@@ -27,6 +27,8 @@ if (countryName === null) {
     case JAMAICA:
       price = 120;
       break;
+    default:
+      message = NO_DELIVERY;
   }
 }
 if (price > 0) {
